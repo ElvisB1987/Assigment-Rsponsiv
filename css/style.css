@@ -1,0 +1,59 @@
+/*----------------------HERO-SECTION--------------------------------*/
+body{
+    font-family: sans-serif;
+}
+
+
+header {
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+header a{
+    color: black;
+    margin-left: 24px;
+} 
+
+header a:hover{
+    color: black;
+}
+
+header a:visited{
+    color: black;
+}
+
+#menu-icon {
+    width: 32px;
+}
+
+
+
+/*----------------------HERO-SECTION--------------------------------*/
+#hero-section {
+    background-position: center;
+    background-image: url(../imgs/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+    #marked {
+        font-size: 17px;
+    }
+}
+#marked {
+    background-color: #34c28c;
+    display: initial;
+}
+
+/*----------------------About us-SECTION--------------------------------*/
+#about-us {
+    background-color:#212529;
+}
+/*----------------------Footer--------------------------------*/
+footer{
+    background-color: black;
+}
