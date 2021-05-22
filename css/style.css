@@ -29,6 +29,13 @@ header a:visited{
     width: 32px;
 }
 
+.solid-header {
+    position: fixed;
+    background-color: hsla(180, 80%, 45%, 0.733);
+
+    transition: background-color 0.5s ease ;
+    
+}
 
 
 /*----------------------HERO-SECTION--------------------------------*/
@@ -65,13 +72,13 @@ footer{
     bottom: 0;
     left: 0;
     right: 0;
-    background: #c2dfdbed;
+    background: hsla(180, 80%, 45%, 0.733);
     z-index: 2;
     display: none;
 }
 
 #mobile-menu a {
-    color:#1d85f1;
+    color:#030155;
 }
 
 #mobile-menu a:hover {
