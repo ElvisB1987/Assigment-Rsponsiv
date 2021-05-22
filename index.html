@@ -12,19 +12,19 @@
 
 <body>
     <div id="mobile-menu">
-        <a id="close-btn" href="#"><img class="img-fluid" src="./imgs/close-button-icon-png-21.png" alt="close"></a>
+        <a id="close-btn" href="#"><img class="img-fluid" src="./imgs/Asset 1.png" alt="close"></a>
         <div class="container">
             <div class="row vh-100 align-items-center">
                 <div class="col-12 text-center">
                     <nav>
                         <div>
-                            <a class="text-decoration-none text-uppercase h3" href="#">Home</a>
+                            <a class="text-decoration-none text-uppercase h3" href="#hero-section">Home</a>
                         </div>
                         <div class="my-3">
-                            <a class="text-decoration-none text-uppercase h3" href="#">Portfolio</a>
+                            <a class="text-decoration-none text-uppercase h3" href="#intro-section">Portfolio</a>
                         </div>
                         <div>
-                            <a class="text-decoration-none text-uppercase h3" href="#">Staff</a>
+                            <a class="text-decoration-none text-uppercase h3" href="#about-us">About US</a>
                         </div>
                         <div class="my-3">
                             <a class="text-decoration-none text-uppercase h3" href="#">Features</a>
@@ -270,11 +270,20 @@
 
     <script>
         window.addEventListener("load", function () {
+
             let menuBtn = document.getElementById("menu-btn");
             let mobileMenu = document.getElementById("mobile-menu");
-            let closeBtn = document.getElementById("menu-btn");
+            let closeBtn = document.getElementById("close-btn");
+
             menuBtn.addEventListener("click", function () {
+
                 mobileMenu.style.display = "block";
+
+            });
+
+            closeBtn.addEventListener("click", function () {
+
+                mobileMenu.style.display = "none"
             });
         });
     </script>
