@@ -11,6 +11,38 @@
 </head>
 
 <body>
+    <div id="mobile-menu">
+        <a id="close-btn" href="#"><img class="img-fluid" src="./imgs/close-button-icon-png-21.png" alt="close"></a>
+        <div class="container">
+            <div class="row vh-100 align-items-center">
+                <div class="col-12 text-center">
+                    <nav>
+                        <div>
+                            <a class="text-decoration-none text-uppercase h3" href="#">Home</a>
+                        </div>
+                        <div class="my-3">
+                            <a class="text-decoration-none text-uppercase h3" href="#">Portfolio</a>
+                        </div>
+                        <div>
+                            <a class="text-decoration-none text-uppercase h3" href="#">Staff</a>
+                        </div>
+                        <div class="my-3">
+                            <a class="text-decoration-none text-uppercase h3" href="#">Features</a>
+                        </div>
+                        <div>
+                            <a class="text-decoration-none text-uppercase h3" href="#">Blog</a>
+                        </div>
+                        <div class="my-3">
+                            <a class="text-decoration-none text-uppercase h3" href="#">Contact</a>
+                        </div>
+                        <div>
+                            <a class="text-decoration-none text-uppercase h3" href="#">Download</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header class="p-3">
         <div class="container-fluid">
@@ -28,7 +60,8 @@
                     <a class="text-decoration-none" href="#">Download</a>
                 </div>
                 <div class="d-md-none col-10 text-end">
-                    <img id="menu-icon" src="./imgs/menu.png" alt="menu">
+                    <a href="#" id="menu-btn"><img id="menu-icon" src="./imgs/menu.png" alt="menu"></a>
+
                 </div>
             </div>
         </div>
@@ -234,6 +267,17 @@
 
     <script src="js/jquery-3.6.0.slim.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        window.addEventListener("load", function () {
+            let menuBtn = document.getElementById("menu-btn");
+            let mobileMenu = document.getElementById("mobile-menu");
+            let closeBtn = document.getElementById("menu-btn");
+            menuBtn.addEventListener("click", function () {
+                mobileMenu.style.display = "block";
+            });
+        });
+    </script>
 </body>
 
 </html>

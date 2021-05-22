@@ -57,3 +57,28 @@ header a:visited{
 footer{
     background-color: black;
 }
+/******************MOBILE MENU****************************/
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #312423ed;
+    z-index: 2;
+};
+
+#mobile-menu a {
+    color: white;
+};
+
+#mobile-menu a:hover {
+    color: rgb(175,171,151);
+};
+
+#mobile-menu #close-btn {
+    position: absolute;
+    right: 23px ;
+    top: 8px ;
+    width: 36px;
+};
