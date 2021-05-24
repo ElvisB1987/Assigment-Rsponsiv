@@ -268,36 +268,42 @@
     </footer>
 
 
-    <script src="js/jquery-3.6.0.slim.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+
     <script src="js/bootstrap.bundle.min.js"></script>
 
     <script>
+
+
         window.addEventListener("load", function () {
-
-            let menuBtn = document.getElementById("menu-btn");
-            let mobileMenu = document.getElementById("mobile-menu");
-            let closeBtn = document.getElementById("close-btn");
-
-            menuBtn.addEventListener("click", function () {
-
-                mobileMenu.style.display = "block";
-
-            });
-
-            closeBtn.addEventListener("click", function () {
-
-                mobileMenu.style.display = "none"
-            });
-
-            let mobileMenuItems = document.getElementsByClassName("mobile-Menu-Items");
-
-            for (let i = 0; i < mobileMenuItems.length; i++) {
-                mobileMenuItems[i].addEventListener("click", function () {
-                    mobileMenu.style.display = "none";
-                });
-            };
-
+            /*
+                        let menuBtn = document.getElementById("menu-btn");
+                        let mobileMenu = document.getElementById("mobile-menu");
+                        let closeBtn = document.getElementById("close-btn");
+            
+                        menuBtn.addEventListener("click", function () {
+            
+                            mobileMenu.style.display = "block";
+            
+                        });
+            
+                        closeBtn.addEventListener("click", function () {
+            
+                            mobileMenu.style.display = "none"
+                        });
+            
+                        let mobileMenuItems = document.getElementsByClassName("mobile-Menu-Items");
+            
+                        for (let i = 0; i < mobileMenuItems.length; i++) {
+                            mobileMenuItems[i].addEventListener("click", function () {
+                                mobileMenu.style.display = "none";
+                            });
+                        };
+            */
             //for header
+            $("#menu-btn, #close-btn").click(function () {
+                $("#mobile-menu, #menu-icon").toggle();
+            });
 
             let heroSection = document.getElementById("hero-section");
             let heroSectionHeight = heroSection.clientHeight;
