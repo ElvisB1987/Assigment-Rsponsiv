@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout</title>
+    <script src="https://kit.fontawesome.com/228ecfebca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/leaflet.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -80,6 +82,12 @@
             </div>
 
         </div>
+        <a id="arrow-down" href="#intro-section">
+            <span class="fa-stack fa-2x">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="fas fa-chevron-down fa-stack-1x"></i>
+            </span>
+        </a>
     </section>
 
     <section id="intro-section" class="px-5">
@@ -256,21 +264,35 @@
             </div>
         </div>
     </section>
+    <section id="map-section">
+        <div id="map">
+
+        </div>
+    </section>
 
     <footer>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 py-3 text-center text-light">
+                <div class="col-md-5 offset-md-1 text-center text-light">
                     <p>&copy 2020 ITAcademy</p>
+                </div>
+                <div class="col-md-5 text-right" id="social-icons">
+                    <a class="mx-3" href="#"> <i class="fab fa-instagram"></i></a>
+                    <a class="mx-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="mx-3" href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a class="mx-3" href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </div>
+
     </footer>
 
 
     <script src="js/jquery-3.6.0.min.js"></script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/leaflet.js"></script>
 
     <script>
 
@@ -304,7 +326,7 @@
             $("#menu-btn, #close-btn").click(function () {
                 $("#mobile-menu, #menu-icon").toggle();
             });
-
+            /*
             let heroSection = document.getElementById("hero-section");
             let heroSectionHeight = heroSection.clientHeight;
 
@@ -320,8 +342,36 @@
                         header.classList.remove("solid-header")
                     }
                 }
+            }); */
+
+            $(document).scroll(function () {
+                let header = $("#header");
+
+                if ($(this).scrollTop() > $("#hero-section").height()) {
+                    if (!header.hasClass("solid-heder")) {
+                        header.addClass("solid-header");
+                    }
+                } else {
+                    if (header.hasClass("solid-header")) {
+                        header.removeClass("solid-header");
+                    }
+                }
             });
+
+            var myMap = L.map('map', {
+                center: [43.22911, 19.71994],
+                zoom: 17
+            });
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenstreetMap</a> contributors'
+            }).addTo(myMap);
+
+            var marker = L.marker([43.22911, 19.71994]).addTo(myMap);
+            marker.bindPopup("Maeket Meenar");
+
         });
+
     </script>
 </body>
 
